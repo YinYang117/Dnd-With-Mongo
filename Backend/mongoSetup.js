@@ -1,6 +1,6 @@
 const { MongoClient, ServerApiVersion } = require('mongodb');
-console.log(MongoClient);
-console.log(ServerApiVersion);
+console.log(`${MongoClient}`);
+// console.log(ServerApiVersion); // === { v1: '1' }
 // const uri = "mongodb+srv://LinuxSys--0:LinuxSys--0@dungeonsanddragons.1mnmar9.mongodb.net/?retryWrites=true&w=majority";
 
 // // Create a MongoClient with a MongoClientOptions object to set the Stable API version

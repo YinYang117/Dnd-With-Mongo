@@ -1,6 +1,6 @@
+debugger
 const { MongoClient, ServerApiVersion } = require('mongodb');
 // console.log(ServerApiVersion); // === { v1: '1' }
-
 const uri = "mongodb+srv://LinuxSys--0:LinuxSys--0@dungeonsanddragons.1mnmar9.mongodb.net/?retryWrites=true&w=majority";
 
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
@@ -21,10 +21,11 @@ async function run() {
     console.log("Pinged your deployment. You successfully connected to MongoDB!");
   } catch (e) {
     console.log(`An Error Occured: \n ${e}`)
+    // console.dir(obj) will allow you to see an interactive list of all properties in the obj
   } finally {
     // Ensures that the client will close when you finish/error
     await client.close();
   }
 }
 
-run().catch(console.dir);
+run().catch(console.dir); // Is this .catch now redundant after adding it inside the run func?
